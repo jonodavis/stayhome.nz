@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stay Home!</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <link rel="shortcut icon" href="media/pancake_logo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="content">
+    <h1>COVID-19 Event Risk Calculator</h1>
+
+    <p>The calculator below is used to estimate the risk involved with attending a public event during the COVID-19 outbreak. Change the input values manually or use the common values box to see how the risk changes depending on population, number of circulating cases, and event size.</p>
+
+    <p>Up to date information on COVID-19 is available from the <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019" target="_blank">WHO website</a>. A well-sourced map of confirmed and active COVID-19 cases can be found <a href="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">here</a>.</p>
+
+    <p><a href="https://staythefuckhome.com/" target="_blank">#StayTheF—Home</a></p>
+
+    <form>
+      <label for="population">Population</label>
+      <input type="number" id="population" name="population" value="5000000" step="10000" min="0">
+
+      <label for="infected">Circulating Cases</label>
+      <input type="number" id="infected" name="infected" value="2000" step="10" min="0">
+
+      <label for="size">Event Size</label>
+      <input type="number" id="size" name="size" value="1000" step="10" min="0">
+    </form>
+    <div class="autofill">
+      <p id="autofillHeader">Common Values</p>
+
+      <p>Population: <span id="USA" class="fillBtn">United States</span>, <span id="NZ" class="fillBtn">New Zealand</span>, <span id="UK" class="fillBtn">United Kingdom</span>, <span id="NYC" class="fillBtn">New York City</span>, <span id="AKL" class="fillBtn">Auckland</span>, <span id="SYD" class="fillBtn">Sydney</span>, <span id="CA" class="fillBtn">California</span></p>
+
+      <p>Circulating Cases: <span id="10" class="fillBtn">10</span>, <span id="100" class="fillBtn">100</span>, <span id="500" class="fillBtn">500</span>, <span id="1000" class="fillBtn">1,000</span>, <span id="5000" class="fillBtn">5,000</span>, <span id="10000" class="fillBtn">10,000</span></p>
+
+      <p>Event: <span id="COACHELLA" class="fillBtn">Coachella (daily)</span>, <span id="NBA" class="fillBtn">NBA Game</span>, <span id="CONCERT" class="fillBtn">Small Concert</span>, <span id="LECTURE" class="fillBtn">Lecture</span>, <span id="DINNER" class="fillBtn">Dinner Party</span></p> 
+    </div>
+    <div class="result">
+      <p>There is a <span id="risk">0%</span> chance of an COVID-19 positive person attending the event.</p>
+    </div>
+    <footer>
+      <div style="border-top: 3px solid #3e3e3e; margin: 3% auto;  width: 100%;"></div>
+      <div class="source">
+        <p>Probability calculation <a href="https://twitter.com/joshuasweitz">source</a>. Created in Auckland, New Zealand by <a href="http://pancake.nz">Jono Davis</a>. Some code used from <a href="https://taniarascia.github.io/primitive/">here</a>.</p>
+      </div>
+    </footer>
+    
+  </div>  
+  <script src="index.js"></script>
+</body>
+</html>
